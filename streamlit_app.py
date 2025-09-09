@@ -47,3 +47,7 @@ if ingredients_list :
 
     ingredients_dataframe = session.table("smoothies.public.orders")
     st.dataframe(data=ingredients_dataframe, use_container_width=True)
+
+import requests
+smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+st.text(smoothiefroot_response)
